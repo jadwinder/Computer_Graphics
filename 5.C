@@ -1,18 +1,29 @@
-
+//5. WAP to draw three rectangles with different fill styles
+//[Hint : use setfillstyle() and floodfill() functions.
+#include<graphics.h>
 #include<stdio.h>
 #include<conio.h>
-#include<graphics.h>
 void main()
 {
 	int gdrive=DETECT,gmode;
-	initgraph(&gdrive, &gmode,"C:/turboc3/bgi");
-	circle(300,240,200);
-	setfillstyle(SOLID_FILL,YELLOW);
-	floodfill(310,250,WHITE);
+	initgraph(&gdrive,&gmode,"C:/TURBOC3/BGI");
 
-	fillellipse(150,80,2,6);
-	setfillstyle(SOLID_FILL,0);
-	floodfill(500,450,WHITE);
+	rectangle(10,50,250,180);
+	setfillstyle(SOLID_FILL,12);
+	floodfill(60,165,WHITE);
+
+	rectangle(10,250,250,370);
+	setfillstyle(HATCH_FILL,BLUE);
+	floodfill(60,260,WHITE);
+
+	rectangle(300,50,550,180);
+	setfillstyle(LINE_FILL,4);
+	floodfill(500,80,WHITE);
+
+	rectangle(300,250,550,370);
+	setfillstyle(LTSLASH_FILL,11);
+	floodfill(310,260,WHITE);
+
 	getch();
 	closegraph();
 }
